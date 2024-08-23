@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiAgroCare", "ApiAgroCare\ApiAgroCare.csproj", "{E8FC4154-F40C-4E8D-B73B-7C653AAEADAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8FC4154-F40C-4E8D-B73B-7C653AAEADAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8FC4154-F40C-4E8D-B73B-7C653AAEADAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8FC4154-F40C-4E8D-B73B-7C653AAEADAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8FC4154-F40C-4E8D-B73B-7C653AAEADAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C51503F7-A7DF-44A9-AC97-E1D168B3DC49}
+	EndGlobalSection
+EndGlobal

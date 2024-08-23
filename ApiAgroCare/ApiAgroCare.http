@@ -1,0 +1,6 @@
+@ApiAgroCare_HostAddress = http://localhost:5003
+
+GET {{ApiAgroCare_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
