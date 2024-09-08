@@ -1,13 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace ApiAgroCare.Model
 {
     [Table("T_AGROCARE_AVALIACOES")]
     public class Avaliacoes
     {
-        public class AgrocareAvaliacao
-        {
             [Key]
             public long IdAvaliacoes { get; set; }
 
@@ -20,6 +19,7 @@ namespace ApiAgroCare.Model
             // Relacionamentos
             [Required]
             [ForeignKey("ConsultaID")]
+            [JsonIgnore]
             public Consulta Consulta { get; set; }
             public long ConsultaID { get; set; }
 
@@ -32,6 +32,6 @@ namespace ApiAgroCare.Model
             [ForeignKey("UserID")]
             public User User { get; set; }
             public long UserID { get; set; }
-        }
+        
     }
 }

@@ -8,7 +8,7 @@ namespace ApiAgroCare.Data
     {
         public dbContext(DbContextOptions<dbContext> options) : base(options) { }
 
-        public DbSet<AgrocareAvaliacao> Avaliacoes { get; set; }
+        public DbSet<Avaliacoes> Avaliacoes { get; set; }
         public DbSet<Boi> Bois { get; set; }
         public DbSet<Consulta> Consultas { get; set; }
         public DbSet<Tratamento> Tratamentos { get; set; }

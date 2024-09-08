@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace ApiAgroCare.Model
 {
@@ -21,12 +22,12 @@ namespace ApiAgroCare.Model
         // Relacionamentos
         [Required]
         [ForeignKey("UserID")]
-        public User UserDono { get; set; }
+        public User UserDono { get; set; }   // Associação com User (muitos bois para um usuário)
         public long UserID { get; set; }
 
-        [Required]
         [ForeignKey("ConsultaID")]
-        public Consulta Consultas { get; set; }
-        public long ConsultaID { get; set; }
+        public Consulta? Consultas { get; set; }  // Um boi pode ter uma consulta opcional
+        public long? ConsultaID { get; set; }
     }
 }
+

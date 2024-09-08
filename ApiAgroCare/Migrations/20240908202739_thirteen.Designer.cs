@@ -3,6 +3,7 @@ using System;
 using ApiAgroCare.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Oracle.EntityFrameworkCore.Metadata;
 
@@ -11,9 +12,11 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace ApiAgroCare.Migrations
 {
     [DbContext(typeof(dbContext))]
-    partial class dbContextModelSnapshot : ModelSnapshot
+    [Migration("20240908202739_thirteen")]
+    partial class thirteen
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -123,11 +126,14 @@ namespace ApiAgroCare.Migrations
                         .IsRequired()
                         .HasColumnType("NVARCHAR2(2000)");
 
+                    b.Property<long>("UserID")
+                        .HasColumnType("NUMBER(19)");
+
                     b.HasKey("ID");
 
-                    b.HasIndex("IdUser");
-
                     b.HasIndex("IdVeterinario");
+
+                    b.HasIndex("UserID");
 
                     b.ToTable("T_AGROCARE_CONSULTAS");
                 });
@@ -321,15 +327,15 @@ namespace ApiAgroCare.Migrations
 
             modelBuilder.Entity("ApiAgroCare.Model.Consulta", b =>
                 {
-                    b.HasOne("ApiAgroCare.Model.User", "User")
-                        .WithMany()
-                        .HasForeignKey("IdUser")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("ApiAgroCare.Model.Veterinario", "Veterinario")
                         .WithMany("Consultas")
                         .HasForeignKey("IdVeterinario")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ApiAgroCare.Model.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

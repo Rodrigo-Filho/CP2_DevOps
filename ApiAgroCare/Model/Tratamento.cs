@@ -11,6 +11,7 @@ namespace ApiAgroCare.Model
 
     public string TipoTratamento { get; set; }
     public string NomeMedicamento { get; set; }
+    [Column(TypeName = "decimal(10,2)")]
     public decimal DoseMedicamentoML { get; set; }
     public string DescricaoTratamento { get; set; }
     public string ViaAdministracao { get; set; }

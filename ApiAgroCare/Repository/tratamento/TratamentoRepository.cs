@@ -72,7 +72,9 @@ namespace ApiAgroCare.Repository.tratamento
                     ObservacaoTratamento = tratamentoCriacaoDto.ObservacaoTratamento,
                     DataTratamento = tratamentoCriacaoDto.DataTratamento,
                     VeterinarioID = tratamentoCriacaoDto.VeterinarioID,
-                    ConsultaID = tratamentoCriacaoDto.ConsultaID
+                    ConsultaID = tratamentoCriacaoDto.ConsultaID,
+                    UserID = tratamentoCriacaoDto.IdUser,
+                    Idboi = tratamentoCriacaoDto.BoiId
                 };
 
                 dbContext.Add(tratamento);
@@ -113,6 +115,8 @@ namespace ApiAgroCare.Repository.tratamento
                 tratamento.DataTratamento = tratamentoEdicaoDto.DataTratamento;
                 tratamento.VeterinarioID = tratamentoEdicaoDto.VeterinarioID;
                 tratamento.ConsultaID = tratamentoEdicaoDto.ConsultaID;
+                tratamento.UserID = tratamentoEdicaoDto.IdUser;
+                tratamento.Idboi = tratamentoEdicaoDto.BoiId;
 
                 dbContext.Update(tratamento);
                 await dbContext.SaveChangesAsync();

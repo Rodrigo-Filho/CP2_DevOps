@@ -3,6 +3,7 @@ using System;
 using ApiAgroCare.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Oracle.EntityFrameworkCore.Metadata;
 
@@ -11,9 +12,11 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace ApiAgroCare.Migrations
 {
     [DbContext(typeof(dbContext))]
-    partial class dbContextModelSnapshot : ModelSnapshot
+    [Migration("20240908191327_ten")]
+    partial class ten
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -86,9 +89,7 @@ namespace ApiAgroCare.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ConsultaID")
-                        .IsUnique()
-                        .HasFilter("\"ConsultaID\" IS NOT NULL");
+                    b.HasIndex("ConsultaID");
 
                     b.HasIndex("UserID");
 
@@ -125,7 +126,8 @@ namespace ApiAgroCare.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("IdUser");
+                    b.HasIndex("IdUser")
+                        .IsUnique();
 
                     b.HasIndex("IdVeterinario");
 
@@ -305,8 +307,8 @@ namespace ApiAgroCare.Migrations
             modelBuilder.Entity("ApiAgroCare.Model.Boi", b =>
                 {
                     b.HasOne("ApiAgroCare.Model.Consulta", "Consultas")
-                        .WithOne("Boi")
-                        .HasForeignKey("ApiAgroCare.Model.Boi", "ConsultaID");
+                        .WithMany()
+                        .HasForeignKey("ConsultaID");
 
                     b.HasOne("ApiAgroCare.Model.User", "UserDono")
                         .WithMany("Bois")
@@ -327,11 +329,19 @@ namespace ApiAgroCare.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("ApiAgroCare.Model.Boi", "Boi")
+                        .WithOne()
+                        .HasForeignKey("ApiAgroCare.Model.Consulta", "IdUser")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("ApiAgroCare.Model.Veterinario", "Veterinario")
                         .WithMany("Consultas")
                         .HasForeignKey("IdVeterinario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Boi");
 
                     b.Navigation("User");
 
@@ -376,9 +386,6 @@ namespace ApiAgroCare.Migrations
             modelBuilder.Entity("ApiAgroCare.Model.Consulta", b =>
                 {
                     b.Navigation("Avaliacoes")
-                        .IsRequired();
-
-                    b.Navigation("Boi")
                         .IsRequired();
                 });
 

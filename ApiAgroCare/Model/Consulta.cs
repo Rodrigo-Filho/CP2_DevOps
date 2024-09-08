@@ -21,22 +21,23 @@ namespace ApiAgroCare.Model
         public DateTime DataConsulta { get; set; }
 
         // Relacionamentos
-        [Required]
-        public Boi Boi { get; set; }
+
+
+        public Boi Boi { get; set; }   // Associação com Boi (muitos-para-um)
         public long IdBoi { get; set; }
 
-        [Required]
         [ForeignKey("IdUser")]
-        public User User { get; set; }
+        public User User { get; set; }  // Associação com User (muitos-para-um)
         public long IdUser { get; set; }
 
         [Required]
         [ForeignKey("IdVeterinario")]
-        public Veterinario Veterinario { get; set; }
+        public Veterinario Veterinario { get; set; }  // Associação com Veterinário (muitos-para-um)
         public long IdVeterinario { get; set; }
 
-        public AgrocareAvaliacao Avaliacoes { get; set; }
+        public Avaliacoes Avaliacoes { get; set; }
+    
 
 
-    }
+}
 }

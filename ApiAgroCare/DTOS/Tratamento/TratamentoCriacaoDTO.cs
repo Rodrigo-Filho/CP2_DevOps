@@ -13,5 +13,7 @@
         public DateTime DataTratamento { get; set; }
         public long VeterinarioID { get; set; }  
         public long ConsultaID { get; set; }
+        public long IdUser { get; set; }
+        public long BoiId { get; set;}
     }
 }

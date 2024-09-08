@@ -3,6 +3,7 @@ using System;
 using ApiAgroCare.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Oracle.EntityFrameworkCore.Metadata;
 
@@ -11,9 +12,11 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace ApiAgroCare.Migrations
 {
     [DbContext(typeof(dbContext))]
-    partial class dbContextModelSnapshot : ModelSnapshot
+    [Migration("20240908153039_seven")]
+    partial class seven
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -69,7 +72,7 @@ namespace ApiAgroCare.Migrations
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
-                    b.Property<long?>("ConsultaID")
+                    b.Property<long>("ConsultaID")
                         .HasColumnType("NUMBER(19)");
 
                     b.Property<double>("Saude")
@@ -87,8 +90,7 @@ namespace ApiAgroCare.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ConsultaID")
-                        .IsUnique()
-                        .HasFilter("\"ConsultaID\" IS NOT NULL");
+                        .IsUnique();
 
                     b.HasIndex("UserID");
 
@@ -306,7 +308,9 @@ namespace ApiAgroCare.Migrations
                 {
                     b.HasOne("ApiAgroCare.Model.Consulta", "Consultas")
                         .WithOne("Boi")
-                        .HasForeignKey("ApiAgroCare.Model.Boi", "ConsultaID");
+                        .HasForeignKey("ApiAgroCare.Model.Boi", "ConsultaID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ApiAgroCare.Model.User", "UserDono")
                         .WithMany("Bois")
