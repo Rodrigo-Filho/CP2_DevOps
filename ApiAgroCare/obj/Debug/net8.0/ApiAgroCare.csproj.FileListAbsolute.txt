@@ -239,3 +239,5 @@ C:\Users\Haytekinfo\source\repos\ApiAgroCare\ApiAgroCare\obj\Debug\net8.0\refint
 C:\Users\Haytekinfo\source\repos\ApiAgroCare\ApiAgroCare\obj\Debug\net8.0\ApiAgroCare.pdb
 C:\Users\Haytekinfo\source\repos\ApiAgroCare\ApiAgroCare\obj\Debug\net8.0\ApiAgroCare.genruntimeconfig.cache
 C:\Users\Haytekinfo\source\repos\ApiAgroCare\ApiAgroCare\obj\Debug\net8.0\ref\ApiAgroCare.dll
+C:\Users\Haytekinfo\source\repos\ApiAgroCare\ApiAgroCare\bin\Debug\net8.0\ApiAgroCare.xml
+C:\Users\Haytekinfo\source\repos\ApiAgroCare\ApiAgroCare\obj\Debug\net8.0\ApiAgroCare.xml

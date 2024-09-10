@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ApiAgroCare.Controllers
 {
+    /// <summary>
+    /// Controlador responsável por operações com usuários.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase

@@ -6,6 +6,8 @@ using ApiAgroCare.Repository.tratamento;
 using ApiAgroCare.Repository.user;
 using ApiAgroCare.Repository.veterinario;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,19 +28,48 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+
+builder.Services.AddSwaggerGen(optopns =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    optopns.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "Projeto de conclusão Challenge FIAP 2024 - 2ºSemestre",
+        Description = "API criada pelo time x para executar as tarefas de suporte e filtragem de dados\n" +
+        "para uso com BI e evolução de conteúdo e piriri pororo!!!",
+        TermsOfService = new Uri("https://ofensa.ingwazstudio.com.br/terms-and-conditions"),
+        Contact = new OpenApiContact
+        {
+            Name = "Pelego Numero 1",
+            Email = "pf1954@fiap.com.br",
+            Url = new Uri("https://ofensa.ingwazstudio.com.br"),
+        },
+        License = new OpenApiLicense
+        {
+            Name = "MIT",
+            Url = new Uri("https://ofensa.ingwazstudio.com.br/sucesso"),
+        }
+    });
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    optopns.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+});
+var app = builder.Build();
 
+app.UseSwagger(options =>
+{
+    options.SerializeAsV2 = true;
+});
+
+app.UseSwaggerUI(options =>
+{
+    options.InjectStylesheet("/swagger-ui/custom.css");
+});
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
+app.UseStaticFiles();
 app.MapControllers();
 
 app.Run();
