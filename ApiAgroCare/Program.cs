@@ -31,22 +31,51 @@ builder.Services.AddSwaggerGen();
 
 
 // Configure the HTTP request pipeline.
-
+var contacts = new List<OpenApiContact>
+{
+    new OpenApiContact
+    {
+        Name = "Alef Gabriel",
+        Email = "lafitealef@gmail.com",
+        Url = new Uri("https://github.com/AlefGas"),
+    },
+    new OpenApiContact
+    {
+        Name = "Rodrigo gonçalves teixeira filho",
+        Email = "rodrigogoncalves2005t@gmail.com",
+        Url = new Uri("https://github.com/Rodrigo-Filho"),
+    },
+     new OpenApiContact
+    {
+        Name = "Danilo araujo mendonça",
+        Email = "danilomendonca08@gmail.com",
+        Url = new Uri("https://github.com/DaniloMendonca08"),
+    },
+      new OpenApiContact
+    {
+        Name = "Felipe Sieiro",
+        Email = "felipedossantos0804@gmail.com",
+        Url = new Uri("https://github.com/FelipeSieiro"),
+    },
+         new OpenApiContact
+    {
+        Name = "Leonardo Lizieiro",
+        Email = "lflizier@gmail.com",
+        Url = new Uri("https://github.com/codelize"),
+    }
+};
 builder.Services.AddSwaggerGen(optopns =>
 {
+    var contactInfo = string.Join("\n", contacts.Select(c =>
+       $"{c.Name} - [Email: {c.Email}] github: ({c.Url})"));
     optopns.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "v1",
-        Title = "Projeto de conclusão Challenge FIAP 2024 - 2ºSemestre",
-        Description = "API criada pelo time x para executar as tarefas de suporte e filtragem de dados\n" +
-        "para uso com BI e evolução de conteúdo e piriri pororo!!!",
-        TermsOfService = new Uri("https://ofensa.ingwazstudio.com.br/terms-and-conditions"),
-        Contact = new OpenApiContact
-        {
-            Name = "Pelego Numero 1",
-            Email = "pf1954@fiap.com.br",
-            Url = new Uri("https://ofensa.ingwazstudio.com.br"),
-        },
+        Title = "Projeto de Api do grupo AgroCare",
+        Description = "Essa API foi criada para servir de backend para as aplicações do grupo agrocare \n" +
+        "criação de projeto tem 5 classes e 2 enuns\n\n" +
+        $"**Contatos do Time:**\n{contactInfo}",
+        Contact = contacts.FirstOrDefault(),
         License = new OpenApiLicense
         {
             Name = "MIT",
