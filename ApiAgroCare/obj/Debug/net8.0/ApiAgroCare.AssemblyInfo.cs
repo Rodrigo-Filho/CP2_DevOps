@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiAgroCare")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ada675b057c4f91404d9d181bb14fc21d9df109a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb16408cc85fd4a28c07cf6262bbd5703ae4ecb1")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiAgroCare")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiAgroCare")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
