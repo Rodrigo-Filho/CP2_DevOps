@@ -4,10 +4,230 @@
         <name>ApiAgroCare</name>
     </assembly>
     <members>
+        <member name="M:ApiAgroCare.Controllers.AvaliacoesController.ListarAvaliacoes">
+            <summary>
+            Lista todas as avaliações.
+            </summary>
+            <response code="200">Retorna a lista de avaliações.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.AvaliacoesController.BuscarAvaliacaoPorId(System.Int32)">
+            <summary>
+            Busca uma avaliação por ID.
+            </summary>
+            <param name="idAvaliacao">ID da avaliação a ser buscada.</param>
+            <response code="200">Retorna a avaliação solicitada.</response>
+            <response code="404">Avaliação não encontrada.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.AvaliacoesController.CriarAvaliacao(ApiAgroCare.DTOS.Avaliacoes.AvaliacaoCriacaoDTO)">
+            <summary>
+            Cria uma nova avaliação.
+            </summary>
+            <param name="avaliacaoCriacaoDto">Dados para a criação da avaliação.</param>
+            <response code="201">Avaliação criada com sucesso.</response>
+            <response code="400">Dados inválidos.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.AvaliacoesController.EditarAvaliacao(ApiAgroCare.DTOS.Avaliacoes.AvaliacaoEditarDTO)">
+            <summary>
+            Edita uma avaliação existente.
+            </summary>
+            <param name="avaliacaoEdicaoDto">Dados da avaliação a ser editada.</param>
+            <response code="200">Avaliação editada com sucesso.</response>
+            <response code="400">Dados inválidos.</response>
+            <response code="404">Avaliação não encontrada.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.AvaliacoesController.ExcluirAvaliacao(System.Int32)">
+            <summary>
+            Exclui uma avaliação por ID.
+            </summary>
+            <param name="idAvaliacao">ID da avaliação a ser excluída.</param>
+            <response code="200">Avaliação excluída com sucesso.</response>
+            <response code="404">Avaliação não encontrada.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.BoiController.ListarBois">
+            <summary>
+            Lista todos os bois.
+            </summary>
+            <response code="200">Retorna a lista de bois.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.BoiController.BuscarBoiPorId(System.Int32)">
+            <summary>
+            Busca um boi por ID.
+            </summary>
+            <param name="idBoi">ID do boi a ser buscado.</param>
+            <response code="200">Retorna o boi solicitado.</response>
+            <response code="404">Boi não encontrado.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.BoiController.CriarBoi(ApiAgroCare.DTOS.Boi.BoiCriacaoDTO)">
+            <summary>
+            Cria um novo boi.
+            </summary>
+            <param name="boiCriacaoDto">Dados para a criação do boi.</param>
+            <response code="201">Boi criado com sucesso.</response>
+            <response code="400">Dados inválidos.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.BoiController.EditarBoi(ApiAgroCare.DTOS.Boi.BoiEditarDTO)">
+            <summary>
+            Edita um boi existente.
+            </summary>
+            <param name="boiEdicaoDto">Dados do boi a ser editado.</param>
+            <response code="200">Boi editado com sucesso.</response>
+            <response code="400">Dados inválidos.</response>
+            <response code="404">Boi não encontrado.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.BoiController.ExcluirBoi(System.Int32)">
+            <summary>
+            Exclui um boi por ID.
+            </summary>
+            <param name="idBoi">ID do boi a ser excluído.</param>
+            <response code="200">Boi excluído com sucesso.</response>
+            <response code="404">Boi não encontrado.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.ConsultaController.ListarConsultas">
+            <summary>
+            Lista todas as consultas.
+            </summary>
+            <response code="200">Retorna a lista de consultas.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.ConsultaController.BuscarConsultaPorId(System.Int32)">
+            <summary>
+            Busca uma consulta por ID.
+            </summary>
+            <param name="idConsulta">ID da consulta a ser buscada.</param>
+            <response code="200">Retorna a consulta solicitada.</response>
+            <response code="404">Consulta não encontrada.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.ConsultaController.CriarConsulta(ApiAgroCare.DTOS.Consulta.ConsultaCriacaoDTO)">
+            <summary>
+            Cria uma nova consulta.
+            </summary>
+            <param name="consultaCriacaoDto">Dados para a criação da consulta.</param>
+            <response code="201">Consulta criada com sucesso.</response>
+            <response code="400">Dados inválidos.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.ConsultaController.EditarConsulta(ApiAgroCare.DTOS.Consulta.ConsultaEditarDTO)">
+            <summary>
+            Edita uma consulta existente.
+            </summary>
+            <param name="consultaEdicaoDto">Dados da consulta a ser editada.</param>
+            <response code="200">Consulta editada com sucesso.</response>
+            <response code="400">Dados inválidos.</response>
+            <response code="404">Consulta não encontrada.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.ConsultaController.ExcluirConsulta(System.Int32)">
+            <summary>
+            Exclui uma consulta por ID.
+            </summary>
+            <param name="idConsulta">ID da consulta a ser excluída.</param>
+            <response code="200">Consulta excluída com sucesso.</response>
+            <response code="404">Consulta não encontrada.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.TratamentoController.ListarTratamentos">
+            <summary>
+            Lista todos os tratamentos.
+            </summary>
+            <response code="200">Retorna a lista de tratamentos.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.TratamentoController.BuscarTratamentoPorId(System.Int32)">
+            <summary>
+            Busca um tratamento por ID.
+            </summary>
+            <param name="idTratamento">ID do tratamento a ser buscado.</param>
+            <response code="200">Retorna o tratamento solicitado.</response>
+            <response code="404">Tratamento não encontrado.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.TratamentoController.CriarTratamento(ApiAgroCare.DTOS.Tratamento.TratamentoCriacaoDTO)">
+            <summary>
+            Cria um novo tratamento.
+            </summary>
+            <param name="tratamentoCriacaoDto">Dados para a criação do tratamento.</param>
+            <response code="201">Tratamento criado com sucesso.</response>
+            <response code="400">Dados inválidos.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.TratamentoController.EditarTratamento(ApiAgroCare.DTOS.Tratamento.TratamentoEditarDTO)">
+            <summary>
+            Edita um tratamento existente.
+            </summary>
+            <param name="tratamentoEdicaoDto">Dados do tratamento a ser editado.</param>
+            <response code="200">Tratamento editado com sucesso.</response>
+            <response code="400">Dados inválidos.</response>
+            <response code="404">Tratamento não encontrado.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.TratamentoController.ExcluirTratamento(System.Int32)">
+            <summary>
+            Exclui um tratamento por ID.
+            </summary>
+            <param name="idTratamento">ID do tratamento a ser excluído.</param>
+            <response code="200">Tratamento excluído com sucesso.</response>
+            <response code="404">Tratamento não encontrado.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
         <member name="T:ApiAgroCare.Controllers.UserController">
             <summary>
             Controlador responsável por operações com usuários.
             </summary>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.UserController.ListarUsuarios">
+            <summary>
+            Lista todos os usuários.
+            </summary>
+            <response code="200">Retorna a lista de usuários.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.UserController.BuscarUsuarioPorId(System.Int32)">
+            <summary>
+            Busca um usuário por ID.
+            </summary>
+            <param name="idUsuario">ID do usuário a ser buscado.</param>
+            <response code="200">Retorna o usuário solicitado.</response>
+            <response code="404">Usuário não encontrado.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.UserController.CriarUsuario(ApiAgroCare.DTOS.User.UserCriacaoDTO)">
+            <summary>
+            Cria um novo usuário.
+            </summary>
+            <param name="userCriacaoDto">Dados para a criação do usuário.</param>
+            <response code="201">Usuário criado com sucesso.</response>
+            <response code="400">Dados inválidos.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.UserController.EditarUsuario(ApiAgroCare.DTOS.User.UserEditarDTO)">
+            <summary>
+            Edita um usuário existente.
+            </summary>
+            <param name="userEdicaoDto">Dados do usuário a ser editado.</param>
+            <response code="200">Usuário editado com sucesso.</response>
+            <response code="400">Dados inválidos.</response>
+            <response code="404">Usuário não encontrado.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.UserController.ExcluirUsuario(System.Int32)">
+            <summary>
+            Exclui um usuário por ID.
+            </summary>
+            <param name="idUsuario">ID do usuário a ser excluído.</param>
+            <response code="200">Usuário excluído com sucesso.</response>
+            <response code="404">Usuário não encontrado.</response>
+            <response code="500">Erro interno do servidor.</response>
         </member>
         <member name="T:ApiAgroCare.Migrations.initial">
             <inheritdoc />

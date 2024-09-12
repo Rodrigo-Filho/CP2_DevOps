@@ -75,7 +75,7 @@ builder.Services.AddSwaggerGen(optopns =>
         Description = "Essa API foi criada para servir de backend para as aplicações do grupo agrocare \n" +
         "criação de projeto tem 5 classes e 2 enuns\n\n" +
         $"**Contatos do Time:**\n{contactInfo}",
-        Contact = contacts.FirstOrDefault(),
+        
         License = new OpenApiLicense
         {
             Name = "MIT",
