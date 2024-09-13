@@ -38,6 +38,11 @@ namespace ApiAgroCare.Model
 
         [Required]
         public Planos Planos { get; set; }
+
+        public static implicit operator List<object>(User v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

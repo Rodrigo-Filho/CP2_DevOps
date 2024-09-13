@@ -5,11 +5,32 @@ using ApiAgroCare.Repository.consulta;
 using ApiAgroCare.Repository.tratamento;
 using ApiAgroCare.Repository.user;
 using ApiAgroCare.Repository.veterinario;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],  
+        ValidAudience = builder.Configuration["Jwt:Audience"], 
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+    };
+});
 
 // Add services to the container.
 builder.Services.AddDbContext<dbContext>(options =>
@@ -97,6 +118,7 @@ app.UseSwaggerUI(options =>
     options.InjectStylesheet("/swagger-ui/custom.css");
 });
 app.UseHttpsRedirection();
+app.UseAuthentication();
 app.UseAuthorization();
 app.UseStaticFiles();
 app.MapControllers();

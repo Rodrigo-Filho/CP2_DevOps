@@ -229,6 +229,50 @@
             <response code="404">Usuário não encontrado.</response>
             <response code="500">Erro interno do servidor.</response>
         </member>
+        <member name="M:ApiAgroCare.Controllers.VeterinarioController.ListarVeterinarios">
+            <summary>
+            Lista todos os veterinários.
+            </summary>
+            <response code="200">Retorna a lista de veterinários.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.VeterinarioController.BuscarVeterinarioPorId(System.Int32)">
+            <summary>
+            Busca um veterinário por ID.
+            </summary>
+            <param name="idVeterinario">ID do veterinário a ser buscado.</param>
+            <response code="200">Retorna o veterinário solicitado.</response>
+            <response code="404">Veterinário não encontrado.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.VeterinarioController.CriarVeterinario(ApiAgroCare.DTOS.Veterinario.VeterinarioCriacaoDTO)">
+            <summary>
+            Cria um novo veterinário.
+            </summary>
+            <param name="veterinarioCriacaoDto">Dados para a criação do veterinário.</param>
+            <response code="201">Veterinário criado com sucesso.</response>
+            <response code="400">Dados inválidos.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.VeterinarioController.EditarVeterinario(ApiAgroCare.DTOS.Veterinario.VeterinarioEditarDTO)">
+            <summary>
+            Edita um veterinário existente.
+            </summary>
+            <param name="veterinarioEdicaoDto">Dados do veterinário a ser editado.</param>
+            <response code="200">Veterinário editado com sucesso.</response>
+            <response code="400">Dados inválidos.</response>
+            <response code="404">Veterinário não encontrado.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ApiAgroCare.Controllers.VeterinarioController.ExcluirVeterinario(System.Int32)">
+            <summary>
+            Exclui um veterinário por ID.
+            </summary>
+            <param name="idVeterinario">ID do veterinário a ser excluído.</param>
+            <response code="200">Veterinário excluído com sucesso.</response>
+            <response code="404">Veterinário não encontrado.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
         <member name="T:ApiAgroCare.Migrations.initial">
             <inheritdoc />
         </member>

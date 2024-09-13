@@ -484,3 +484,12 @@ C:\Users\labsfiap\Source\Repos\ApiAgroCare\ApiAgroCare\obj\Debug\net8.0\ApiAgroC
 C:\Users\labsfiap\Source\Repos\ApiAgroCare\ApiAgroCare\obj\Debug\net8.0\ApiAgroCare.pdb
 C:\Users\labsfiap\Source\Repos\ApiAgroCare\ApiAgroCare\obj\Debug\net8.0\ApiAgroCare.genruntimeconfig.cache
 C:\Users\labsfiap\Source\Repos\ApiAgroCare\ApiAgroCare\obj\Debug\net8.0\ref\ApiAgroCare.dll
+C:\Users\Haytekinfo\source\repos\ApiAgroCare\ApiAgroCare\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\Haytekinfo\source\repos\ApiAgroCare\ApiAgroCare\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Haytekinfo\source\repos\ApiAgroCare\ApiAgroCare\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Haytekinfo\source\repos\ApiAgroCare\ApiAgroCare\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Haytekinfo\source\repos\ApiAgroCare\ApiAgroCare\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Haytekinfo\source\repos\ApiAgroCare\ApiAgroCare\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Haytekinfo\source\repos\ApiAgroCare\ApiAgroCare\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Haytekinfo\source\repos\ApiAgroCare\ApiAgroCare\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Haytekinfo\source\repos\ApiAgroCare\ApiAgroCare\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

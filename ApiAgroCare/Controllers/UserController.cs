@@ -104,5 +104,20 @@ namespace ApiAgroCare.Controllers
             var usuarios = await _userRepository.ExcluirUsuario(idUsuario);
             return Ok(usuarios);
         }
+        [HttpPost("Login")]
+        public async Task<IActionResult> Login(UserLoginDTO userLoginDto)
+        {
+            // Chama o método Login no repositório
+            var response = await _userRepository.Login(userLoginDto);
+
+            // Se o login falhar (ex: usuário não encontrado ou senha incorreta)
+            if (!response.Status)
+            {
+                return Unauthorized(new { message = response.Mensagem });
+            }
+
+            // Retorna o token JWT se o login for bem-sucedido
+            return Ok(new { token = response.Dados, message = response.Mensagem });
+        }
     }
 }
