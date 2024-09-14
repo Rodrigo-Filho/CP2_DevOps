@@ -1,11 +1,58 @@
 {
   "Version": 1,
-  "Hash": "Ch9sg/QWHsap4qIhVVTfV3J4g6N5G6vV+vGCtP+rbzk=",
+  "Hash": "dM2wHPbM4p2uOsACLGyqhj4LylanCgRJMm/67Z3XAC4=",
   "Source": "ApiAgroCare",
   "BasePath": "_content/ApiAgroCare",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "ApiAgroCare\\wwwroot",
+      "Source": "ApiAgroCare",
+      "ContentRoot": "C:\\Users\\Haytekinfo\\source\\repos\\ApiAgroCare\\ApiAgroCare\\wwwroot\\",
+      "BasePath": "_content/ApiAgroCare",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Haytekinfo\\source\\repos\\ApiAgroCare\\ApiAgroCare\\wwwroot\\Custom.css",
+      "SourceId": "ApiAgroCare",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haytekinfo\\source\\repos\\ApiAgroCare\\ApiAgroCare\\wwwroot\\",
+      "BasePath": "_content/ApiAgroCare",
+      "RelativePath": "Custom.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Custom.css"
+    },
+    {
+      "Identity": "C:\\Users\\Haytekinfo\\source\\repos\\ApiAgroCare\\ApiAgroCare\\wwwroot\\images\\agrocare.jpg",
+      "SourceId": "ApiAgroCare",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haytekinfo\\source\\repos\\ApiAgroCare\\ApiAgroCare\\wwwroot\\",
+      "BasePath": "_content/ApiAgroCare",
+      "RelativePath": "images/agrocare.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\agrocare.jpg"
+    }
+  ]
 }

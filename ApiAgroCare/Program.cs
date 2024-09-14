@@ -1,3 +1,4 @@
+using ApiAgroCare;
 using ApiAgroCare.Data;
 using ApiAgroCare.Repository.avaliacoes;
 using ApiAgroCare.Repository.boi;
@@ -105,6 +106,7 @@ builder.Services.AddSwaggerGen(optopns =>
     });
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     optopns.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+    
 });
 var app = builder.Build();
 
@@ -115,7 +117,10 @@ app.UseSwagger(options =>
 
 app.UseSwaggerUI(options =>
 {
-    options.InjectStylesheet("/swagger-ui/custom.css");
+
+    options.InjectStylesheet("/custom.css");
+    
+
 });
 app.UseHttpsRedirection();
 app.UseAuthentication();

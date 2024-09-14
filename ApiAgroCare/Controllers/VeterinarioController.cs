@@ -102,6 +102,22 @@ namespace ApiAgroCare.Controllers
             var veterinarios = await _veterinarioRepository.ExcluirVeterinario(idVeterinario);
             return Ok(veterinarios);
         }
+
+        [HttpPost("Login")]
+        public async Task<IActionResult> Login(VeterinarioLoginDTO veterinarioLoginDto)
+        {
+            // Chama o método Login no repositório
+            var response = await _veterinarioRepository.Login(veterinarioLoginDto);
+
+            // Se o login falhar (ex: veterinário não encontrado ou senha incorreta)
+            if (!response.Status)
+            {
+                return Unauthorized(new { message = response.Mensagem });
+            }
+
+            // Retorna o token JWT se o login for bem-sucedido
+            return Ok(new { token = response.Dados, message = response.Mensagem });
+        }
     }
 }
 

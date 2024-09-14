@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Haytekinfo\\source\\repos\\ApiAgroCare\\ApiAgroCare\\wwwroot\\Custom.css",
+      "PackagePath": "staticwebassets\\Custom.css"
+    },
+    {
+      "Id": "C:\\Users\\Haytekinfo\\source\\repos\\ApiAgroCare\\ApiAgroCare\\wwwroot\\images\\agrocare.jpg",
+      "PackagePath": "staticwebassets\\images\\agrocare.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ApiAgroCare.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ApiAgroCare.props",
+      "PackagePath": "build\\ApiAgroCare.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ApiAgroCare.props",
+      "PackagePath": "buildMultiTargeting\\ApiAgroCare.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ApiAgroCare.props",
+      "PackagePath": "buildTransitive\\ApiAgroCare.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
