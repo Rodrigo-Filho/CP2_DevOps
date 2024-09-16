@@ -61,3 +61,12 @@ Você pode acessar a documentação completa dos endpoints e suas descrições e
 - **Models**  Contém as entidades, enums e classes de resposta
 - **Services**  Implementação dos serviços de negócio, seguindo o padrão Singleton
 - **Swagger**  Configurações do Swagger para documentação
+
+## Desenvolvedores
+
+
+- [Alef RM 99487]
+- [Felipe Sieiro RM 98249]
+- [Danilo RM99752 ]
+-[RM551509 - Leonardo Ferreira Lizier]
+-[RM99838 - Rodrigo Gonçalves Teixeira Filho]
