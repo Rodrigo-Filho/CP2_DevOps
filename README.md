@@ -68,5 +68,5 @@ Você pode acessar a documentação completa dos endpoints e suas descrições e
 - [Alef RM 99487]
 - [Felipe Sieiro RM 98249]
 - [Danilo RM99752 ]
-- [RM551509 - Leonardo Ferreira Lizier]
-- [RM99838 - Rodrigo Gonçalves Teixeira Filho]
+- [Leonardo Ferreira Lizier RM551509]
+- [Rodrigo Gonçalves Teixeira Filho RM99838]
