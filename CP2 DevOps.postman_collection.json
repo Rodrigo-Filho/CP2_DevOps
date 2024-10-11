@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "fca98d18-b638-43ca-9f7d-e36d26beb923",
+		"name": "CP2 DevOps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34408367"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Criar Usuario(Agropecuarista)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Lucas Mendes\",\r\n  \"number\": 789012,\r\n  \"endereco\": \"Avenida das Flores, 120, Jardim Botânico, Cidade Verde\",\r\n  \"numerosAnimais\": 200,\r\n  \"email\": \"lucas.mendes@vetcare.com\",\r\n  \"password\": \"Vet@12345\",\r\n  \"status\": true,\r\n  \"planos\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5003/api/User/CriarUsuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"User",
+								"CriarUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todos os usuários",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5003/api/User/ListarUsuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"User",
+								"ListarUsuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar usuário",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"id\": 1,\r\n  \"name\": \"Lucas Mendes\",\r\n  \"number\": 789012,\r\n  \"endereco\": \"Avenida das Flores, 120, Jardim Botânico, Cidade Verde\",\r\n  \"numerosAnimais\": 255,\r\n  \"email\": \"lucas.mendes@gmail.com\",\r\n  \"password\": \"Vet@12345\",\r\n  \"status\": true,\r\n  \"planos\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5003/api/User/EditarUsuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"User",
+								"EditarUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5003/api/User/ExcluirUsuario/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"User",
+								"ExcluirUsuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Veterinario",
+			"item": [
+				{
+					"name": "Criar Veterinario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Dr. João Silva\",\r\n  \"crmv\": \"123456\",\r\n  \"especialidade\": \"Cirurgia Veterinária\",\r\n  \"telefone\": 11987654321,\r\n  \"email\": \"dr.joao.silva@email.com\",\r\n  \"password\": \"senhaSeguraJoao\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5003/api/Veterinario/CriarVeterinario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"Veterinario",
+								"CriarVeterinario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar veterinarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5003/api/Veterinario/ListarVeterinarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"Veterinario",
+								"ListarVeterinarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar veterinario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"id\" : 1,\r\n  \"nome\": \"Dr. João Silva Gomes\",\r\n  \"crmv\": \"123456\",\r\n  \"especialidade\": \"Cirurgia Veterinária Especialista\",\r\n  \"telefone\": 11987654321,\r\n  \"email\": \"dr.joao.silva@email.com\",\r\n  \"password\": \"1234BP**\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5003/api/Veterinario/EditarVeterinario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"Veterinario",
+								"EditarVeterinario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar veterinario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5003/api/Veterinario/ExcluirVeterinario/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"Veterinario",
+								"ExcluirVeterinario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
