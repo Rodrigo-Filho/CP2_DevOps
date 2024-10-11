@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Haytekinfo\\source\\repos\\ApiAgroCare\\ApiAgroCare\\ApiAgroCare.csproj": {}
+    "C:\\Users\\Danil\\Source\\Repos\\ApiAgroCare\\ApiAgroCare\\ApiAgroCare.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Haytekinfo\\source\\repos\\ApiAgroCare\\ApiAgroCare\\ApiAgroCare.csproj": {
+    "C:\\Users\\Danil\\Source\\Repos\\ApiAgroCare\\ApiAgroCare\\ApiAgroCare.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Haytekinfo\\source\\repos\\ApiAgroCare\\ApiAgroCare\\ApiAgroCare.csproj",
+        "projectUniqueName": "C:\\Users\\Danil\\Source\\Repos\\ApiAgroCare\\ApiAgroCare\\ApiAgroCare.csproj",
         "projectName": "ApiAgroCare",
-        "projectPath": "C:\\Users\\Haytekinfo\\source\\repos\\ApiAgroCare\\ApiAgroCare\\ApiAgroCare.csproj",
-        "packagesPath": "C:\\Users\\Haytekinfo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Haytekinfo\\source\\repos\\ApiAgroCare\\ApiAgroCare\\obj\\",
+        "projectPath": "C:\\Users\\Danil\\Source\\Repos\\ApiAgroCare\\ApiAgroCare\\ApiAgroCare.csproj",
+        "packagesPath": "C:\\Users\\Danil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Danil\\Source\\Repos\\ApiAgroCare\\ApiAgroCare\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Haytekinfo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,33 +50,33 @@
               "target": "Package",
               "version": "[4.0.2, )"
             },
+            "EntityFramework.DbContextScope": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.8, )"
             },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.2.2, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[8.0.10, )"
             },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[8.0.10, )"
             },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[1.21.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.4, )"
-            },
-            "Oracle.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.21.140, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -105,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

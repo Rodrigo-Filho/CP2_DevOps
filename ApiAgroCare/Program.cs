@@ -14,6 +14,7 @@ using System.Reflection;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.WebHost.UseUrls("http://*:5003");
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -35,7 +36,7 @@ builder.Services.AddAuthentication(options =>
 
 // Add services to the container.
 builder.Services.AddDbContext<dbContext>(options =>
-options.UseOracle(builder.Configuration.GetConnectionString("OracleConnection")));
+options.UseSqlServer(builder.Configuration.GetConnectionString("AzureSQLConnection")));
 builder.Services.AddScoped<IAvaliacoes, AvaliacoesRepository>();
 builder.Services.AddScoped<IBoi, BoiRepository>();
 builder.Services.AddScoped<IConsulta, ConsultaRepository>();

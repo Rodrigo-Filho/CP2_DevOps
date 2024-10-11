@@ -1,11 +1,11 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Haytekinfo\\source\\repos\\ApiAgroCare\\ApiAgroCare\\wwwroot\\Custom.css",
+      "Id": "C:\\Users\\Danil\\Source\\Repos\\ApiAgroCare\\ApiAgroCare\\wwwroot\\Custom.css",
       "PackagePath": "staticwebassets\\Custom.css"
     },
     {
-      "Id": "C:\\Users\\Haytekinfo\\source\\repos\\ApiAgroCare\\ApiAgroCare\\wwwroot\\images\\agrocare.jpg",
+      "Id": "C:\\Users\\Danil\\Source\\Repos\\ApiAgroCare\\ApiAgroCare\\wwwroot\\images\\agrocare.jpg",
       "PackagePath": "staticwebassets\\images\\agrocare.jpg"
     },
     {

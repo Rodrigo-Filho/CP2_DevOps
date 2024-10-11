@@ -4,7 +4,7 @@ namespace ApiAgroCare.DTOS.User
 {
     public class UserEditarDTO
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Name { get; set; }
         public long Number { get; set; }
         public string Endereco { get; set; }
