@@ -45,17 +45,6 @@ Você pode acessar a documentação completa dos endpoints e suas descrições e
 - **SQL Server** (para banco de dados)
 - **Singleton Pattern** (para gerenciamento de instâncias únicas)
 
-## Como Rodar o Projeto
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/alefgas/apiagrocare.git
-2. Entre no diretório do projeto:
-   ```bash
-   cd agrocare-api
-3. Restaure as dependências do projeto:
-   ```bash
-    dotnet restore
 
 - **Controllers**  Contém os controladores responsáveis pelos endpoints
 - **Models**  Contém as entidades, enums e classes de resposta
